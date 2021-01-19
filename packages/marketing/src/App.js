@@ -5,7 +5,7 @@ import { StylesProvider } from '@material-ui/core/styles';
 import Landing from './components/Landing';
 import Pricing from './components/Pricing';
 
-console.log('running marketing service');
+console.log('running marketing-service');
 
 export default () => {
   return (
