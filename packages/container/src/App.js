@@ -34,7 +34,7 @@ export default () => {
           <Suspense fallback={<ProgressBar />}>
             <Switch>
               <Route path="/auth">
-                <AuthLazy onSignedin={() => setIsSignedin(true)} />
+                <AuthLazy onSignin={() => setIsSignedin(true)} />
               </Route>
               <Route path="/dashboard">
                 {!isSignedin && <Redirect to="/" />}
