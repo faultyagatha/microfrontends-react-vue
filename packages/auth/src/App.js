@@ -13,13 +13,15 @@ const generateClassName = createGenerateClassName({
 });
 
 /** use memory history instead of BrowserRouter */
-export default ({ history }) => {
+export default ({ onSignin, history }) => {
   return (
     <div>
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
-            <Route exact path="/auth/signin" component={Signin} />
+            <Route exact path="/auth/signin">
+              <Signin onSignin={onSignin} />
+            </Route>
             <Route path="/auth/signup" component={Signup} />
           </Switch>
         </Router>

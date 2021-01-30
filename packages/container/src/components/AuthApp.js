@@ -22,6 +22,9 @@ export default () => {
         if (pathname !== nextPathname) {
           history.push(nextPathname);
         }
+      },
+      onSignin: () => {
+        console.log('User signed in');
       }
     });
 

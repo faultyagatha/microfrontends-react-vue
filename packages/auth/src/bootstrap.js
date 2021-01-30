@@ -5,7 +5,7 @@ import { createMemoryHistory, createBrowserHistory } from 'history';
 import App from './App';
 
 // Mount function to start up the app
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, { onSignin, onNavigate, defaultHistory, initialPath }) => {
   //create a copy of history object that
   //will be used for our Router
   //if we're in isolation, use default history
@@ -14,7 +14,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   });
   //listen for navigation events
   if (onNavigate) history.listen(onNavigate);
-  ReactDOM.render(<App history={history} />, el);
+  ReactDOM.render(<App onSignin={onSignin} history={history} />, el);
 
   //communicate navigation from Container
   //down to Marketing App
