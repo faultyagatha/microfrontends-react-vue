@@ -15,6 +15,7 @@ export default () => {
     const { onParentNavigate } = mount(ref.current, {
       //nextPathname comes from 
       //history.location in Marketing App
+      initialPath: history.location.pathname,
       onNavigate: ({ pathname: nextPathname }) => {
         //pathname comes from this App
         const { pathname } = history.location;
