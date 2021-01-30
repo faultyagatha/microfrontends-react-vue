@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { mount } from 'auth/AuthApp';
 
 /** generic approach to decouple our services */
-export default () => {
+export default ({ onSignin }) => {
   const ref = useRef(null);
   const history = useHistory();
 
@@ -23,9 +23,7 @@ export default () => {
           history.push(nextPathname);
         }
       },
-      onSignin: () => {
-        console.log('User signed in');
-      }
+      onSignin
     });
 
     //communicate navigation down to Marketing
