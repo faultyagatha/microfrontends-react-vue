@@ -79,7 +79,7 @@ export default function Album() {
               color="textPrimary"
               gutterBottom
             >
-              Home Page
+              Welcome
             </Typography>
             <Typography
               variant="h5"
@@ -87,9 +87,9 @@ export default function Album() {
               color="textSecondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              We're delighted to see you here and hope you'll enjoy staying with us.
+              Scroll down to see out current offers and get in touch if you have any
+              questions. Have fun!
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
